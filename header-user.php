@@ -4,11 +4,11 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 
-<body>
+<body class="my-header">
     <header>
     <a href="" class="logo">GUDETAMA Café</a>
     <ul>
-        <li><a href="menu.php">Menu</a></li>
+        <li><a href="menu-user.php">Menu</a></li>
         <li><a href="contact.php">Order</a></li>
         <li><a href="contact.php">History</a></li>
     </ul>

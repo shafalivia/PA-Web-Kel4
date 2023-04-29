@@ -1,5 +1,10 @@
 <?php include 'header-user.php'; ?>
 
+<?php 
+    session_start();
+    $username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,12 @@
     <title>Main</title>
 </head>
 <body>
+    <section class="back">
+        <div class="back">
+            <img src="img/home-user/back1.png" alt="">
+        </div>
+    </section>
+
     <section class="index-img">
         <div class="text">
             <h1>Hello <Span>Y/N</Span></h1>

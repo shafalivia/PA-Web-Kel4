@@ -1,5 +1,34 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<?php 
+    session_start();
+    require "db/koneksi.php";
+
+    if(isset($_POST['login'])) {
+        
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($con, $query);
+    $_SESSION['username']=$username;
+
+        if(mysqli_num_rows($result) == 1){
+            echo "<script>
+            alert('Berhasil! Selamat datang" . $_SESSION["username"] . ".');
+            document.location.href = 'main-user.php';
+            </script> ";
+
+        }else{
+            echo "<script>
+            alert('gagal');
+            document.location.href = '1login.php';
+            </script> ";
+            exit;
+        }
+    }
+?>
+
 <body class="align">
     <a href="index.php" class="back-button">
         <span>Back</span>

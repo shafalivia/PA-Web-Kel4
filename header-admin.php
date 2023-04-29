@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 
-<body>
+<body class="my-header">
     <header>
     <a href="" class="logo">MANAGE</a>
     <ul>

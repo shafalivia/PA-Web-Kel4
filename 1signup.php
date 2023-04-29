@@ -1,5 +1,24 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<?php 
+    require "db/koneksi.php";
+
+    if(isset($_POST['signup'])) {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $query = "INSERT INTO user VALUES ('$username', '$email', '$password')";
+
+        mysqli_query($con, $query);
+        echo "<script>
+        alert('Akun anda sudah siap!');
+        document.location.href = '1login.php';
+        </script> ";
+    }
+    ?>
+
 <body class="align">
     <a href="index.php" class="back-button">
         <span>Back</span>

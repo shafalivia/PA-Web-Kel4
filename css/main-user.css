@@ -8,8 +8,14 @@
     background-size: cover;
 } */
 body{
-    background: #FEE5F8;
+  background-color: #FFF1C0;
 }
+
+.back-img {
+  background-size:cover;
+  display: flex;
+}
+
 .index-img {
     display: flex;
     justify-content: flex-end;
