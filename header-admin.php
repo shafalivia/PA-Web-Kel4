@@ -12,9 +12,7 @@
         <li><a href="menu-admin.php">Menu</a></li>
         <li><a href="contact.php">Order</a></li>
         <li><a href="contact.php">Payment</a></li>
-    </ul>
-    <ul>
-        <li><a href="#">Log Out</a></li>
+        <li class="signup"><a href="#">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">

@@ -14,7 +14,7 @@
         <div class="text">
             <h1>Get <Span>egg</Span>-cited!</h1>
             <h2>Come for the <Span>egg</Span>-cellent food,<br> stay for the adorable atmosphere at<br> <span>Gudetama's Café.</span> </h2>
-            <button class="custom-btn btn-1">Buy Now</button>
+            <button class="custom-btn btn-1"><p>Buy now</p></button>
         </div>
         <div class="img">
             <img src="img/header-main/gudetama-hero1.png" alt="">

@@ -6,14 +6,12 @@
 
 <body class="my-header">
     <header>
-    <a href="" class="logo">GUDETAMA Café</a>
+    <a href="#" class="logo">GUDETAMA Café</a>
     <ul>
         <li><a href="menu-user.php">Menu</a></li>
         <li><a href="contact.php">Order</a></li>
         <li><a href="contact.php">History</a></li>
-    </ul>
-    <ul>
-        <li><a href="#">Log Out</a></li>
+        <li class="signup"><a href="#">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">
