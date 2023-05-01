@@ -27,7 +27,7 @@
             exit;
         }
     }
-?>
+    ?>
 
 <body class="align">
     <a href="index.php" class="back-button">
@@ -35,10 +35,13 @@
     </a>
     <div class="circle">
         <div class="grid">
-        <form class="form login">
+        <form class="form login" method="post">
             <input autocomplete="username" type="text" name="username" class="form__input" placeholder="Username" required>
+            
             <input type="password" name="password" class="form__input" placeholder="Password" required> 
+            
             <button type="submit" name="login" class="action-button">Log in</button>
+            
             <p class="form__signup">Don't have an Account? <a href="1signup.php">Sign Up</a></p>
 
         </form>

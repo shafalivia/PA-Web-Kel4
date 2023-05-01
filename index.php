@@ -26,7 +26,7 @@
     <section id="about">
         <?php include 'about.php'; ?>
     </section>
-    <?php include 'menu.php'; ?>
+    <?php include 'menu-user.php'; ?>
 </body>
 
 </html>

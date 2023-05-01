@@ -19,11 +19,12 @@
         <div class="back">
             <img src="img/home-user/back1.png" alt="">
         </div>
+        
     </section>
 
     <section class="index-img">
         <div class="text">
-            <h1>Hello <Span>Y/N</Span></h1>
+            <h1>Hello <Span><?php echo $_SESSION['username'] ?></Span></Span></h1>
             <h2><span>Egg</span>-citing dishes with a side of Gudetama's charm.</h2>
             <button class="custom-btn btn-1">Buy Now</button>
         </div>
@@ -31,7 +32,7 @@
             <img src="img/header-main2/gudetama.png" alt="">
         </div>
     </section>
-
+    <?php include 'menu-user.php'; ?>
 </body>
 </html>
 <?php include 'footer.php'; ?>

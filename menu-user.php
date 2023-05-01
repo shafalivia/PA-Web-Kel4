@@ -21,7 +21,7 @@
     <title>Menuuu</title>
 </head>
 <body>
-
+    <section id="menu">
     <div class="service-customer">
             <form method="post">
             <p id="service-top"></p>  
@@ -29,27 +29,26 @@
                 <?php foreach ($menu as $tb_menu): ?>
                 <div class='service-col'>
                     <div class="service-container">
-                        <p class="service-content"><a href="customer-form-pemesanan.php?id_menu=<?php echo $tb_menu["id_menu"] ?>" name="pesan"><img src="img\menu\<?php echo $tb_menu['image_menu'] ?>" class="service-image" loading="lazy"></a></p>
+                        <p class="service-content"><a href="" name="pesan"><img src="img\menu\<?php echo $tb_menu['image_menu'] ?>" class="service-image" loading="lazy"></a></p>
                         <p class="service-sub-title"><b><?php echo $tb_menu['name_menu'] ?></b></p>
-                        <p class="service-sub-title">Rp. <?php echo $tb_menu['price_menu'] ?>,-</p>
+                        <p class="price-button">Rp. <?php echo $tb_menu['price_menu'] ?>,-</p>
                         
-                        <input type="number" name="jumlah" value="1" id="">
+                        <!-- <input type="number" name="jumlah" value="1" id=""> -->
                         <input type="hidden" name="hidden_name" value="<?php echo $tb_menu["name_menu"]; ?>" />
 						<input type="hidden" name="hidden_price" value="<?php echo $tb_menu["price_menu"]; ?>" />
-                        <button class="price-button"><a href="customer-form-pemesanan.php?id_menu=<?php echo $tb_menu["id_menu"] ?>" name="pesan">Tambahkan</button>
                     </div>
                 </div>
                 <?php endforeach; ?> 
             <p id="service-bottom"></p>      
             </form>      
         </div>
-
+        </section>
 </body>
 </html>
 
 <style>
     .service{
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
@@ -76,10 +75,12 @@
     text-align: center;
 }
 .service-image{
-    width: 150px;
-    height: 100%;
-    border-radius: 5px;
-    cursor: pointer;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    height: 280px;
+    width: 280px;
 }
 .service-image:hover{
     transition: 1s;

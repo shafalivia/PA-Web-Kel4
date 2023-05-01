@@ -8,10 +8,10 @@
     <header>
     <a href="#" class="logo">GUDETAMA Café</a>
     <ul>
-        <li><a href="menu-user.php">Menu</a></li>
-        <li><a href="contact.php">Order</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="1menu.php">Order</a></li>
         <li><a href="contact.php">History</a></li>
-        <li class="signup"><a href="#">Log Out</a></li>
+        <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">
