@@ -15,7 +15,7 @@
 
         if(mysqli_num_rows($result) == 1){
             echo "<script>
-            alert('Berhasil! Selamat datang" . $_SESSION["username"] . ".');
+            alert('Berhasil! Selamat datang " . $_SESSION["username"] . ".');
             document.location.href = 'main-user.php';
             </script> ";
 

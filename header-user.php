@@ -9,8 +9,8 @@
     <a href="#" class="logo">GUDETAMA Café</a>
     <ul>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="1menu.php">Order</a></li>
-        <li><a href="contact.php">History</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="history.php">History</a></li>
         <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
   </header>

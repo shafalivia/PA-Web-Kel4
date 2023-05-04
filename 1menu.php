@@ -4,14 +4,30 @@
 // Untuk mengambil order dari button
 session_start();
 require('db/koneksi.php');
+date_default_timezone_set('Asia/Kuala_Lumpur');
+$date = date('Y/m/d H:i:s');
+$name = $_POST['name'];
+$price = $_POST['price'];
+$jumlah = $_POST['jumlah'];
+$username = $_SESSION['username'];
+$notrak = $_SESSION['notrak'];
+$status = 'Belum di proses';
 
 if (isset($_POST['order'])) {
     if (null !==('cart')) {
+        $query = "INSERT INTO transaksi VALUES ('$date', $notrak,'$username', '$name', '$price', $jumlah, '$status')";
+        echo $query;
+        mysqli_query($con, $query);
+        echo "<script>
+        alert('Pesanan ditambahkan!');;
+        </script> ";
+
         $session_array = array(
             'id' => $_GET['id_menu'],
             'name' => $_POST['name'],
             'price' => $_POST['price'],
-            'jumlah' => $_POST['jumlah']
+            'jumlah' => $_POST['jumlah'],
+            'proses' => $status
         );
 
         $_SESSION['cart'][] = $session_array;
@@ -48,10 +64,7 @@ if (isset($_POST['order'])) {
 
         $resultMenu = mysqli_query($con, "SELECT * FROM tb_menu");
 
-        $menu = [];
-
         while($rowMenu= mysqli_fetch_assoc($resultMenu)){?>
-            <!-- $menu[] = $rowMenu; -->
             <div class="menu">
                 <form method='post' action="1menu.php?id_menu=<?php echo $rowMenu["id_menu"] ?>">
                 <div class="menu-card">  
@@ -79,12 +92,16 @@ if (isset($_POST['order'])) {
         </div>
 
     <div class="con-order">
+    
+    <h1>Nomor Transaksi #<?php echo $notrak ?></h1>
 
     <?php 
     $total = 0;
     $output = '';
     $output .= "
     <table>
+
+        <tr> <th colspan='7'>Checkout Order</th> </tr>
         <tr>
         <th>ID</th>
         <th>Item Order</th>
@@ -92,6 +109,7 @@ if (isset($_POST['order'])) {
         <th>Jumlah</th>
         <th>Harga</th>
         <th>Action</th>
+        <th>Status</th>
         </tr>";
 
         if (!empty($_SESSION['cart'])) {
@@ -104,11 +122,8 @@ if (isset($_POST['order'])) {
                     <td>".$value['price']."</td>
                     <td>".$value['jumlah']."</td>
                     <td>".number_format((int)$value['jumlah'] * (int)$value['price'], 2)."</td>
-                    <td>
-                        <a href='1menu.php?action=remove&id=".$value['id']."'>
-                        <button>Remove</button>
-                        </a>
-                    </td>
+                    <td> </td>
+                    <td>".$value['proses']."</td>
                 </tr>
                 ";
 
@@ -124,6 +139,13 @@ if (isset($_POST['order'])) {
                 <a href='1menu.php?action=clearall'>
                 <button>Clear All</button>
                 </a>
+                <td> </td>
+                </tr>
+
+                <tr>
+                <th colspan='7'> 
+                <a href='1menu.php?action=pesan'>
+                <button>Proses Pesanan</button> </th> 
                 </tr>
             ";
         }
@@ -133,17 +155,33 @@ if (isset($_POST['order'])) {
     </div>
 
     <?php
+    require('db/koneksi.php');
     if (isset($_GET['action'])) {
 
-        if($_GET['action'] == 'clearall') {
+        if ($_GET['action'] == 'clearall') {
             unset($_SESSION['cart']);
+            $delete  = "DELETE FROM transaksi WHERE no_transaksi = $notrak";
+            mysqli_query($con, $delete);
         }
+
+        // ini cuma buat hapus isi checkout, bukan di database, jadi gk dipake
         if ($_GET['action']=='remove') {
             foreach ($_SESSION['cart'] as $key => $value) {
                 if ($value['id'] == $_GET['id']) {
                     unset($_SESSION['cart'][$key]);
                 }
             }
+        }
+
+        if ($_GET['action'] == 'pesan') {
+            unset($_SESSION['cart']);
+            $update  = "UPDATE transaksi SET status='Pesanan diterima' WHERE no_transaksi = $notrak";
+            echo $update;
+            mysqli_query($con, $update);
+            echo "<script>
+            alert('Pesanan sedang di proses silahkan ditunggu!');
+            document.location.href = 'main-user.php';
+            </script> ";
         }
     }
     
