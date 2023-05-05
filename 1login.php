@@ -9,9 +9,12 @@
         
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
-    $result = mysqli_query($con, $query);
-    $_SESSION['username']=$username;
+    $role = $_POST['type'];
+
+    if($role == 'Buyer') {
+        $query = "SELECT * FROM user WHERE username='$username' AND password='$password' AND role='user'";
+        $result = mysqli_query($con, $query);
+        $_SESSION['username']=$username;
 
         if(mysqli_num_rows($result) == 1){
             echo "<script>
@@ -27,6 +30,48 @@
             exit;
         }
     }
+
+    elseif($role == 'Admin') {
+        $query = "SELECT * FROM user WHERE username='$username' AND password='$password' AND role='admin'";
+        $result = mysqli_query($con, $query);
+        $_SESSION['username']=$username;
+
+        if(mysqli_num_rows($result) == 1){
+            echo "<script>
+            alert('Berhasil! Selamat datang Admin " . $_SESSION["username"] . ".');
+            document.location.href = 'main-admin.php';
+            </script> ";
+
+        }else{
+            echo "<script>
+            alert('gagal');
+            document.location.href = '1login.php';
+            </script> ";
+            exit;
+        }
+    }
+
+    elseif($role == 'Kasir') {
+        $query = "SELECT * FROM user WHERE username='$username' AND password='$password' AND role='kasir'";
+        $result = mysqli_query($con, $query);
+        $_SESSION['username']=$username;
+
+        if(mysqli_num_rows($result) == 1){
+            echo "<script>
+            alert('Berhasil! Selamat datang Kasir " . $_SESSION["username"] . ".');
+            document.location.href = 'index.php';
+            </script> ";
+
+        }else{
+            echo "<script>
+            alert('gagal');
+            document.location.href = '1login.php';
+            </script> ";
+            exit;
+        }
+    }
+
+}
     ?>
 
 <body class="align">
@@ -36,6 +81,15 @@
     <div class="circle">
         <div class="grid">
         <form class="form login" method="post">
+            <div class="input-opt">
+                <p>Login sebagai</p>
+                <select name="type" id="select">
+                    <option value="-1">Pilih peran anda</option>
+                    <option value="Buyer">Buyer</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Kasir">Kasir</option>
+                </select>
+            </div>
             <input autocomplete="username" type="text" name="username" class="form__input" placeholder="Username" required>
             
             <input type="password" name="password" class="form__input" placeholder="Password" required> 

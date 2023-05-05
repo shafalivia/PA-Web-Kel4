@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query = "INSERT INTO user VALUES ('$username', '$email', '$password')";
+        $query = "INSERT INTO user VALUES ('$username', '$email', '$password', 'user')";
 
         mysqli_query($con, $query);
         echo "<script>

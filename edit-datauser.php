@@ -1,9 +1,4 @@
 <?php 
-session_start();
-$username = $_SESSION['username'];
-?>
-
-<?php 
     function executeQuery($query){
         require('db/koneksi.php');
         $result = mysqli_query($con, $query);
@@ -12,34 +7,32 @@ $username = $_SESSION['username'];
 
     // Asc
     if(isset($_POST['ASC'])){
-    $asc_query = "SELECT * FROM transaksi 
-                WHERE username = '$username' 
-                ORDER BY tanggal ASC";
+    $asc_query = "SELECT * FROM user
+                WHERE role = 'user' 
+                ORDER BY username ASC";
     $result = executeQuery($asc_query);
     }
 
     // Desc
     elseif (isset ($_POST['DESC'])) {
-    $desc_query = "SELECT * FROM transaksi 
-                WHERE username = '$username' 
-                ORDER BY tanggal DESC";
+    $desc_query = "SELECT * FROM user
+                WHERE role = 'user'  
+                ORDER BY username DESC";
     $result = executeQuery($desc_query);
     }
 
     // Searching
     elseif (isset ($_POST['search'])) {
         $valueToSearch = $_POST['valueToSearch'];
-        $s_query = "SELECT * FROM transaksi 
-                WHERE username = '$username' AND CONCAT(pesanan, no_transaksi, tanggal, status)
+        $s_query = "SELECT * FROM user 
+                WHERE role = 'user' AND CONCAT(username, email, password)
                 LIKE '%".$valueToSearch."%'";
         $result = executeQuery($s_query);
         }
-    
 
     // Default
     else {
-        $default_query = "SELECT * FROM transaksi 
-                        WHERE username = '$username'";
+        $default_query = "SELECT * FROM user WHERE role = 'user'";
         $result = executeQuery($default_query);
 }
 ?>
@@ -56,7 +49,7 @@ $username = $_SESSION['username'];
     <div class="Cart-Container">
 
     <div class="Header">
-        <h3 class="Heading">Riwayat Pesanan</h3>
+        <h3 class="Heading">Data User Buyer</h3>
         <h5 class="Action">Back</h5>
     </div>
 
@@ -65,12 +58,11 @@ $username = $_SESSION['username'];
     <table border="1">
         <tr> 
             <th>
-            <input type="submit" name="ASC" value="Ascending"><br><br>
+            <input type="submit" name="ASC" value="Ascending">
             </th>
             <th>
-            <input type="submit" name="DESC" value="Descending"><br><br>
+            <input type="submit" name="DESC" value="Descending">
             </th>
-            <th colspan='3'>Pesanan User <Span><?php echo $_SESSION['username'] ?></Span></th>
             <th colspan="2">
             <input type="text" name="valueToSearch" placeholder="Value To Search">
             <input type="submit" name="search" value="Cari">
@@ -78,12 +70,10 @@ $username = $_SESSION['username'];
         </tr>
         <tr>
             <th>No.</th>
-            <th>Tanggal</th>
-            <th>No. Transaksi</th>
-            <th>Pesanan</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>Status</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Action</th>
         </tr>
 
         <?php 
@@ -91,12 +81,13 @@ $username = $_SESSION['username'];
         while ($row = mysqli_fetch_assoc($result)) {?>
         <tr>
             <td> <?php echo $i ?> </td>
-            <td><?php echo $row['tanggal'] ?></td>
-            <td><?php echo $row['no_transaksi'] ?></td>
-            <td><?php echo $row['pesanan'] ?></td>
-            <td><?php echo $row['harga'] ?></td>
-            <td><?php echo $row['jumlah'] ?></td>
-            <td><?php echo $row['status'] ?></td>
+            <td><?php echo $row['username'] ?></td>
+            <td><?php echo $row['email'] ?></td>
+            <td><?php echo $row['password'] ?></td>
+            <td><a href="del-datauser.php?id=<?php echo $row['username'] ?>">Hapus Data</a> <br>
+            <a href="upd-datauser.php?id=<?php echo $row['username'] ?>">Update Data</a>
+            </td>
+
         </tr>    
         <?php $i++ ?>
         <?php } ?>
