@@ -81,19 +81,18 @@
     <div class="circle">
         <div class="grid">
         <form class="form login" method="post">
-            <div class="input-opt">
-                <p>Login sebagai</p>
+
+            <input autocomplete="username" type="text" name="username" class="form__input" placeholder="Username" required>
+            
+            <input type="password" name="password" class="form__input" placeholder="Password" required> 
+            <div class="input-opt " type="text" name="username">
                 <select name="type" id="select">
-                    <option value="-1">Pilih peran anda</option>
+                    <option value="" disabled selected>Choose a role</option>
                     <option value="Buyer">Buyer</option>
                     <option value="Admin">Admin</option>
                     <option value="Kasir">Kasir</option>
                 </select>
             </div>
-            <input autocomplete="username" type="text" name="username" class="form__input" placeholder="Username" required>
-            
-            <input type="password" name="password" class="form__input" placeholder="Password" required> 
-            
             <button type="submit" name="login" class="action-button">Log in</button>
             
             <p class="form__signup">Don't have an Account? <a href="1signup.php">Sign Up</a></p>

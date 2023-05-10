@@ -6,9 +6,9 @@
 
 <body class="my-header">
     <header>
-    <a href="" class="logo">MANAGE</a>
+    <a href="main-admin.php" class="logo">Back</a>
     <ul>
-        <li class="signup"><a href="#">Log Out</a></li>
+        <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">

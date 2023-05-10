@@ -29,7 +29,8 @@
                 <?php foreach ($menu as $tb_menu): ?>
                 <div class='service-col'>
                     <div class="service-container">
-                        <p class="service-content"><a href="" name="pesan"><img src="img\menu\<?php echo $tb_menu['image_menu'] ?>" class="service-image" loading="lazy"></a></p>
+                        <p class="service-content"><a href="" name="pesan">
+                            <img src="img\menu\<?php echo $tb_menu['image_menu'] ?>" class="service-image" loading="lazy"></a></p>
                         <p class="service-sub-title"><b><?php echo $tb_menu['name_menu'] ?></b></p>
                         <p class="price-button">Rp. <?php echo $tb_menu['price_menu'] ?>,-</p>
                         
@@ -47,7 +48,7 @@
 </html>
 
 <style>
-    .service{
+.service{
     width: 100%;
     margin: auto;
     text-align: center;
@@ -69,7 +70,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     color: #160606;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 24px;
 }
 .service-content{
     text-align: center;

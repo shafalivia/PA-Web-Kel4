@@ -1,6 +1,7 @@
 <?php include 'header-user.php'; ?>
 
 <?php 
+error_reporting(E_ALL ^ E_WARNING); 
 // Untuk mengambil order dari button
 session_start();
 require('db/koneksi.php');
@@ -14,6 +15,7 @@ $notrak = $_SESSION['notrak'];
 $status = 'Belum di proses';
 
 if (isset($_POST['order'])) {
+
     if (null !==('cart')) {
         $query = "INSERT INTO transaksi VALUES ('$date', $notrak,'$username', '$name', '$price', $jumlah, '$status')";
         echo $query;
@@ -49,48 +51,14 @@ if (isset($_POST['order'])) {
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/1menu.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-
-<div class="container">
-    <div class="con-menu">
-    <?php
-    // Untuk menampilkan menu
-        require('db/koneksi.php');
-
-        $resultMenu = mysqli_query($con, "SELECT * FROM tb_menu");
-
-        while($rowMenu= mysqli_fetch_assoc($resultMenu)){?>
-            <div class="menu">
-                <form method='post' action="1menu.php?id_menu=<?php echo $rowMenu["id_menu"] ?>">
-                <div class="menu-card">  
-                    <div class="menu-img">
-                        <img src=" img\menu\<?php echo $rowMenu['image_menu'] ?>" style="height: 200px;">
-                    </div>
-                    
-                    <div class="menu-text">
-                        <h2><?php echo $rowMenu['name_menu'] ?></h2>
-                        <h2><?php echo number_format($rowMenu['price_menu']) ?></h2>
-                        <input type="number" name="jumlah" value="1" id="">
-
-                        <!-- Untuk mengambil value -->
-                        <input type="hidden" name="name" value="<?php echo $rowMenu['name_menu'] ?>">
-                        <input type="hidden" name="price" value="<?php echo $rowMenu['price_menu'] ?>"> 
-                        
-                    </div>
-                
-            </div>
-            <input class="order-btn" type="submit" name="order" value="+Order">
-            </form>
-            </div>  
-        <?php }
-        ?>
-        </div>
-
+    <div class="container">
     <div class="con-order">
     
     <h1>Nomor Transaksi #<?php echo $notrak ?></h1>
@@ -150,10 +118,10 @@ if (isset($_POST['order'])) {
             ";
         }
 
-    echo $output;
-    ?>
-    </div>
-
+        echo $output;
+        ?>
+        </div>
+    <div class="con-menu">
     <?php
     require('db/koneksi.php');
     if (isset($_GET['action'])) {
@@ -186,6 +154,39 @@ if (isset($_POST['order'])) {
     }
     
     ?>
-</div>
+    <?php
+        error_reporting(E_ALL ^ E_WARNING); 
+    // Untuk menampilkan menu
+        require('db/koneksi.php');
+
+        $resultMenu = mysqli_query($con, "SELECT * FROM tb_menu");
+
+        while($rowMenu= mysqli_fetch_assoc($resultMenu)){?>
+            <div class="menu">
+                <form method='post' action="1menu.php?id_menu=<?php echo $rowMenu["id_menu"] ?>">
+                <div class="menu-card">  
+                    <div class="menu-img">
+                        <img src=" img\menu\<?php echo $rowMenu['image_menu'] ?>" ">
+                    </div>
+                    
+                    <div class="menu-text">
+                        <h2><?php echo $rowMenu['name_menu'] ?></h2>
+                        <h2><?php echo number_format($rowMenu['price_menu']) ?></h2>
+                        <input type="number" name="jumlah" value="1" id="">
+
+                        <!-- Untuk mengambil value -->
+                        <input type="hidden" name="name" value="<?php echo $rowMenu['name_menu'] ?>">
+                        <input type="hidden" name="price" value="<?php echo $rowMenu['price_menu'] ?>"> 
+                        
+                    </div>
+                <input class="order-btn" type="submit" name="order" value="+Order" id="inputnum">
+            </div>
+            </form>
+            </div>  
+        <?php }
+        ?>
+    </div>
+    </div>
 </body>
 </html>
+

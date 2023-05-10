@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -15,4 +16,23 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+h1, h2, h3{
+  color: #272727;
+}
+.title {
+  padding: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: #272727;
+  font-size: 40px;
+  text-shadow:
+
+              0 0 15px rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+h1 span{
+  color: #FBB138;
 }

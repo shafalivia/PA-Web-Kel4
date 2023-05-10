@@ -1,3 +1,5 @@
+
+
 <?php 
     function executeQuery($query){
         require('db/koneksi.php');

@@ -6,10 +6,9 @@
 
 <body class="my-header">
     <header>
-    <a href="#" class="logo">GUDETAMA Café</a>
+    <a href="main-user.php" class="logo">GUDETAMA Café</a>
     <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#order">Order</a></li>
+        <li><a href="main-user.php">Home</a></li>
         <li><a href="1history.php">History</a></li>
         <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
