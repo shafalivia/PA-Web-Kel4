@@ -8,7 +8,7 @@
     <header>
     <a href="" class="logo">MANAGE</a>
     <ul>
-        <li class="signup"><a href="#">Log Out</a></li>
+        <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">

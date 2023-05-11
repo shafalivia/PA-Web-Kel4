@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <?php 
+    error_reporting(E_ALL ^ E_WARNING); 
     session_start();
     require "db/koneksi.php";
 
@@ -59,7 +60,7 @@
         if(mysqli_num_rows($result) == 1){
             echo "<script>
             alert('Berhasil! Selamat datang Kasir " . $_SESSION["username"] . ".');
-            document.location.href = 'index.php';
+            document.location.href = 'kasir.php';
             </script> ";
 
         }else{
@@ -69,6 +70,13 @@
             </script> ";
             exit;
         }
+    }
+
+    elseif($role == null) {
+        echo "<script>
+            alert('Gagal! Masukkan role anda');
+            document.location.href = '1login.php';
+            </script> ";
     }
 
 }
