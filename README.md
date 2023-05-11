@@ -5,7 +5,7 @@ Tutor
 CSS
 login (front end ✅ , back end kureng)
 regis ✅ 
---- kalau login ga isi role, lingkarannya ke kiri anjay
+--- kalau login ga isi role, lingkarannya ke kiri anjay ✅sudah bang
 
 Home-user 
 -home ✅ 
@@ -22,8 +22,20 @@ Home-Admin
 -edit menu 50%
 -edit data user 50%
 -edit riwayat 20%
+-edit karyawan
+di table nya yg menu CRUD nya mau diubah jadi tombol kh?
 
 Update data 0
 tambah menu 20%
----gudetama yg baring gabisa dihapus anjay (fixed id jgn 0, tolong hapusin shaf)
----log out admin 
+---gudetama yg baring gabisa dihapus anjay (fixed id jgn 0, tolong hapusin shaf)  ✅ buka databse yg baru di up
+---log out admin  ✅
+
+tambahan dari konsul :
+alern nya diubah jadi pop up
+mau pake font gak?
+
+Menu kasir (zaki bs aja nnti)
+Bikinn tutorial juga
+
+Mau tambah dashboard ga ya? buat nampilin jumlah user, menu, pemasukkan, dsb...
+
