@@ -41,4 +41,4 @@ Menu kasir (zaki bs aja nnti)
 Bikinn tutorial juga
 
 Mau tambah dashboard ga ya? buat nampilin jumlah user, menu, pemasukkan, dsb...
-
+(sempat kah bro? -yln)
