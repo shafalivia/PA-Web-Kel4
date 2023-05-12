@@ -8,21 +8,21 @@ regis ✅
 --- kalau login ga isi role, lingkarannya ke kiri anjay ✅sudah bang
 
 Home-user 
--home ✅ 
--menu ✅ 
--footer ✅ 
+- home ✅ 
+- menu ✅ 
+- footer ✅ 
 
 Home-buyer
--home ✅ 
--make order 80%
--history 30%
+- home ✅ 
+- make order 80%
+- history 30%
 
 Home-Admin
--home 90%
--edit menu 50%
--edit data user 50%
--edit riwayat 20%
--edit karyawan
+- home 90%
+- edit menu 50%
+- edit data user 50%
+- edit riwayat 20%
+- edit karyawan
 di table nya yg menu CRUD nya mau diubah jadi tombol kh? (nanti aku aja yg ubah shaf,tinggal ksih padding -yln)
 
 Home-Kasir
@@ -30,8 +30,8 @@ Home-Kasir
 
 Update data 0
 tambah menu 20%
----gudetama yg baring gabisa dihapus anjay (fixed id jgn 0, tolong hapusin shaf)  ✅ buka databse yg baru di up
----log out admin  ✅
+- gudetama yg baring gabisa dihapus anjay (fixed id jgn 0, tolong hapusin shaf)  ✅ buka databse yg baru di up
+- log out admin  ✅
 
 tambahan dari konsul :
 alern nya diubah jadi pop up
