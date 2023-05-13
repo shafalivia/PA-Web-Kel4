@@ -45,21 +45,24 @@ if(isset($_POST['tambah'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" type="text/css" href="css/update-data.css">
 </head>
 <body>
+    <a href="edit-menu.php" class="back-button">
+    <span>Back</span></a>
+
     <h1>Input Data Menu</h1>
                 <form action="" method="POST" enctype="multipart/form-data">
+                <p>Id Menu</p>
                 <input type="text" name="id_menu" placeholder="Enter ID Menu..." required>
                     <p>Name Menu</p>
                     <input type="text" name="name_menu" placeholder="Enter name..." required>
                     <p>Product Image</p>
                     <input type="file" name="image_menu" accept="image/jpg, image/png, image/webp" required>
                     <p>Price</p>
-                    <input type="number" name="price_menu" placeholder="Enter price..." required>
+                    <input type="number" name="price_menu" placeholder="Enter price..." required> <br>
             
-                <a href="edit-menu.php">Back</a>
-                <input type='submit' name="tambah" value='Tambah'></a>
+                    <button type="submit" name="tambah">TAMBAH</button>
                 </form>
 </body>
 </html>

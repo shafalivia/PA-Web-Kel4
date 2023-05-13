@@ -1,7 +1,7 @@
 <?php include 'header-user.php'; ?>
 
 <?php 
-error_reporting(E_ALL ^ E_WARNING); 
+error_reporting(E_ERROR | E_PARSE);
 // Untuk mengambil order dari button
 session_start();
 require('db/koneksi.php');
@@ -17,7 +17,7 @@ $status = 'Belum di proses';
 if (isset($_POST['order'])) {
 
     if (null !==('cart')) {
-        error_reporting(E_ALL ^ E_WARNING);
+        // Masuk ke database
         $query = "INSERT INTO transaksi VALUES ('$date', $notrak,'$username', '$name', '$price', $jumlah, '$status')";
         echo $query;
         mysqli_query($con, $query);
@@ -25,6 +25,7 @@ if (isset($_POST['order'])) {
         alert('Pesanan ditambahkan!');;
         </script> ";
 
+        // Masuk ke Session
         $session_array = array(
             'id' => $_GET['id_menu'],
             'name' => $_POST['name'],

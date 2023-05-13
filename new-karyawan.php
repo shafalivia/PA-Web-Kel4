@@ -31,12 +31,16 @@ $result1 = mysqli_query($con, $sel_query);
 
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="css/update-data.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <a href="edit-karyawan.php" class="back-button">
+    <span>Back</span></a>
+
     <h1>Tambah Data</h1>
     <form action="" method="get">
 

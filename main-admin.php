@@ -25,9 +25,9 @@
 				<p>Edit Transaction History</p>
 			</div>
 		</a>
-		<a href="edit-history.php">
+		<a href="edit-karyawan.php">
 			<div class="card">
-				<img src="img/admin/gudee4.jpg"  alt="Edit History" width="150px" height="150px">
+				<img src="img/admin/gudee4.jpg"  alt="Edit Karyawan" width="150px" height="150px">
 				<h2>Edit Karyawan</h2>
 				<p>Edit Employee's Data</p>
 			</div>

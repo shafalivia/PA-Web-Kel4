@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body class="align">
 <?php 
     error_reporting(E_ALL ^ E_WARNING); 
     session_start();
@@ -111,4 +114,4 @@
     </div>
  
 </body>
-   
+</html>

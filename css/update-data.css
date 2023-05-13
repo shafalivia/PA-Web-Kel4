@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #483114;
@@ -23,7 +28,16 @@ body {
   
   input[type=text], select {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
+    margin: 5px 0px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+  }
+
+  input[type=number] {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
     margin: 5px 0px;
     border: none;
     border-radius: 3px;

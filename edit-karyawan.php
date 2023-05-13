@@ -85,7 +85,7 @@
             <td><?php echo $row['role'] ?></td>
             <td><?php echo $row['username'] ?></td>
             <td>
-                <a href="del-karyawan.php?id=<?php echo $row['id_karyawan'] ?>">Hapus Data</a>
+                <a href="del-karyawan.php?id=<?php echo $row['id_karyawan'] ?>">Hapus Data</a> <br>
                 <a href="upd-karyawan.php?id=<?php echo $row['id_karyawan'] ?>">Update Data</a>
             </td>
 
