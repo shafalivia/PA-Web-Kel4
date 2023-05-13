@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -114,4 +115,9 @@
     </div>
  
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+    
+>>>>>>> dac214edeac14e5ed52ea4ede2cf6abef0da3814
