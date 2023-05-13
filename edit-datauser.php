@@ -50,10 +50,7 @@
 <body>
     <div class="Cart-Container">
 
-    <div class="Header">
-        <h3 class="Heading">Data User Buyer</h3>
-        <h5 class="Action">Back</h5>
-    </div>
+    <?php include 'header-admin2.php'; ?>
 
     <form method="post">
 
@@ -65,7 +62,7 @@
             <th>
             <input type="submit" name="DESC" value="Descending">
             </th>
-            <th colspan="2">
+            <th colspan="3">
             <input type="text" name="valueToSearch" placeholder="Value To Search">
             <input type="submit" name="search" value="Cari">
             </th>

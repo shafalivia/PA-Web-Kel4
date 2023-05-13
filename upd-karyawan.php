@@ -62,28 +62,32 @@ $result1 = mysqli_query($con, $sel_query);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="css/update-data.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <a href="edit-karyawan.php" class="back-button">
+        <span>Back</span>
+    </a>
     <h1>Update Data</h1>
     <form action="" method="post">
         <?php while( $row = mysqli_fetch_assoc($result)) :?>
 
             <input type="hidden" name="id" value="<?php echo $row['id_karyawan']?>"> <br>
-            Nama Lengkap  : <input type="text" name="nama" value="<?php echo $row['nama']?>"> <br>
-            Jabatan : <input type="text" name="jabatan" value="<?php echo $row['jabatan']?>"> <br>
-            Kontak : <input type="text" name="kontak" value="<?php echo $row['kontak']?>"> <br>
-            Username : 
+            Nama Lengkap   <input type="text" name="nama" value="<?php echo $row['nama']?>"> <br>
+            Jabatan  <input type="text" name="jabatan" value="<?php echo $row['jabatan']?>"> <br>
+            Kontak  <input type="text" name="kontak" value="<?php echo $row['kontak']?>"> <br>
+            Username 
             <select name="username">
                 <?php while($sel_row1 = mysqli_fetch_array($result1)):; ?>
                 <option value=" <?php echo $sel_row1[0]; ?> "> 
                                 <?php echo $sel_row1[0]; ?> </option>
                 <?php endwhile; ?>
             </select> <br>
-            
-            <button type="submit" name="update">Update</button>
+                <button type="submit" name="update" class="right">Update</button>
+
         <?php endwhile ?>
     </form>
 </body>

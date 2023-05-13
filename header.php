@@ -11,7 +11,7 @@
     <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="signup"><a href="1signup.php">Sign Up</a></li>
+        <li class="signup"><a href="1login.php">Log In</a></li>
     </ul>
   </header>
   <script type="text/javascript">

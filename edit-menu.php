@@ -46,12 +46,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <?php include 'header-admin2.php'; ?>
     <div class="Cart-Container">
-
-    <div class="Header">
-        <h3 class="Heading">Data Menu</h3>
-        <h5 class="Action">Back</h5>
-    </div>
 
     <form method="post">
 
@@ -63,7 +59,7 @@
             <th>
             <input type="submit" name="DESC" value="Descending">
             </th>
-            <th colspan="4"><a href="new-menu.php">Tambah Menu Baru</a></th>
+            <th colspan="4"><a href="new-menu.php"><span>Tambah Menu</span>></a></th>
         </tr>
         <tr>
             <th>No.</th>
@@ -83,7 +79,7 @@
             <td><img src="img/menu/<?= $row['image_menu']?>" height="120px" width="120px"></td>
             <td><?php echo $row['name_menu'] ?></td>
             <td><?php echo $row['price_menu'] ?></td>
-            <td><a href="del-menu.php?id=<?php echo $row['id_menu'] ?>">Hapus Data</a></td>
+            <td><a href="del-menu.php?id=<?php echo $row['id_menu'] ?>">Delete</a></td>
 
         </tr>    
         <?php $i++ ?>

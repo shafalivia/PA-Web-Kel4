@@ -50,11 +50,15 @@ if( isset($_POST['update'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/update-data.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<a href="edit-karyawan.php" class="back-button">
+        <span>Back</span>
+    </a>3
     <h1>Update Data</h1>
     <form action="" method="post">
         <?php while( $row = mysqli_fetch_assoc($result)) :?>

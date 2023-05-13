@@ -40,17 +40,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="css/edit-history.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="Cart-Container">
-
-    <div class="Header">
-        <h3 class="Heading">Data Karyawan</h3>
-        <h5 class="Action">Back</h5>
-    </div>
+    
+    <?php include 'header-admin2.php'; ?>
 
     <form method="post">
 
@@ -62,7 +60,7 @@
             <th>
             <input type="submit" name="DESC" value="Descending">
             </th>
-            <th colspan="6"><a href="new-karyawan.php">Tambah Data Baru</a></th>
+            <th colspan="6"><a href="new-karyawan.php"><span>Tambah Data Baru</span></a></th>
         </tr>
         <tr>
             <th>No.</th>

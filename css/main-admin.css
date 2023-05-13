@@ -10,9 +10,9 @@ body {
 .card {
     width: 250px;
     height: 300px;
-    background-color:burlywood;
+    background-color:#483114;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: 24px;
     margin: 0px 20px;
     display: flex;
     flex-direction: column;
@@ -27,12 +27,12 @@ body {
 h2 {
     margin: 0px;
     font-size: 24px;
-    color: #212121;
+    color: #f3f3f3;
 }
 p {
     margin: 0px;
     font-size: 16px;
-    color: #757575;
+    color: #e48900;
 }
 a {
     text-decoration: none;

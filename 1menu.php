@@ -17,6 +17,7 @@ $status = 'Belum di proses';
 if (isset($_POST['order'])) {
 
     if (null !==('cart')) {
+        error_reporting(E_ALL ^ E_WARNING);
         $query = "INSERT INTO transaksi VALUES ('$date', $notrak,'$username', '$name', '$price', $jumlah, '$status')";
         echo $query;
         mysqli_query($con, $query);

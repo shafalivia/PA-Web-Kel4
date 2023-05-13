@@ -6,9 +6,13 @@
 
 <body class="my-header">
     <header>
-    <a href="main-admin.php" class="logo">Back</a>
+    <a href="main-admin.php" class="logo">Manage</a>
     <ul>
-        <li class="signup"><a href="index.php">Log Out</a></li>
+      <li><a href="edit-menu.php">Menu</a></li>
+      <li><a href="edit-history.php">History</a></li>
+      <li><a href="edit-datauser.php">Data User</a></li>
+      <li><a href="edit-karyawan.php">Karyawan</a></li>
+      <li class="signup"><a href="index.php">Log Out</a></li>
     </ul>
   </header>
   <script type="text/javascript">
