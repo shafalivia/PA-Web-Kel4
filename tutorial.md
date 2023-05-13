@@ -30,7 +30,7 @@
 10. Masuk ke role Kasir, tersedia menu untuk memilih menu cafe yang ada di database dan menu pembayaran
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/6acbf2eb-597f-4476-bdf6-1429fa877e78)
 
-11. Kasir dapat memasukkan menu dan jumlahnya.
+11. Kasir dapat memasukkan menu dan jumlahnya. <br>
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/a6d4c313-9739-4954-9911-081a826c22ec)
 
 12. Pesanan dapat dimasukkan ke keranjang untuk di lakukan pembayaran dan print nota
@@ -42,7 +42,7 @@
 14. Jika Pembayaran berhasil
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/1f6860be-660a-4a74-a223-6aeb3705ecc1)
 
-15. Hasil Print nota ke format csv 
+15. Hasil Print nota ke format csv. <br>
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/f4e963d9-63dc-419e-a56a-a549c5ed3276)
 
 16. Masuk ke role Admin terdapat Menu untuk mengedit menu, data user, riwayat, dan karyawan
