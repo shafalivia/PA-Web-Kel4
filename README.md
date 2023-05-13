@@ -7,7 +7,7 @@ Tutor
 CSS
 login (front end ✅)
 regis ✅ 
---- kalau login ga isi role, lingkarannya ke kiri anjay ✅sudah bang
+--- kalau login ga isi role, lingkarannya ke kiri anjay ✅sudah bang, sip bg
 
 Home-user 
 - home ✅ 
@@ -16,19 +16,37 @@ Home-user
 
 Home-buyer
 - home ✅ 
-- make order 80%
-- history 30%
+- make order ✅  ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/119934043/19a43e6d-69be-45a8-8863-9be8dd450fc0) (tlg udh kutambahin         error_reporting(E_ALL ^ E_WARNING); padahal SHAFA ;-;)
+- history ✅ ( ini kea apa cug klo historynya pas bagian search gabisa balik kecuali refresh, apa tambahin button refresh ya? dmn tpi -yln)
+kalau mau tambahin pake css ini, saranku taro dibawah aja kasih bru center, atau taro dalam table ya?
+input[type="submit"] {
+  background-color: #FBB138;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #c58b2e;
+}
 
 Home-Admin
-- home 90%
-- edit menu 50%
-- edit data user 50%
-- edit riwayat 20%
-- edit karyawan
-di table nya yg menu CRUD nya mau diubah jadi tombol kh? (nanti aku aja yg ubah shaf,tinggal ksih padding -yln)
+- home ✅ 
+- edit menu ✅ 
+- edit data user ✅ 
+- edit riwayat ✅ 
+- edit karyawan ✅
+
+Home-Admin, update data
+- update data karyawan ✅
+- update data user ✅
+di table nya yg menu CRUD nya mau diubah jadi tombol kh? (sembarang shaf)
 
 Home-Kasir
-- aku lupa kita pake kasir udh ada dibikin kah?
+- aku lupa kita pake kasir udh ada dibikin kah? 
 
 Update data 0
 tambah menu 20%
