@@ -14,10 +14,10 @@ Terdapat 3 jenis user yang dapat mengakses fitur web, yaitu:
 
 # Fitur
 Masing-masing peran tersebut memiliki akses terhadapt fitur yang berbeda. <br> 
-**=====================================================================================** <br> <br>
+**======================================================================** <br> <br>
 **Fitur Buyer :** 
 <br> Sign-up -> Log-in -> Melihat Menu -> Menambah Order -> Membuat/Membatalkan Pesanan -> Melihat History Order -> Log-out. <br> <br>
-**=====================================================================================** <br> <br>
+**======================================================================** <br> <br>
 **Fitur Admin :**
 <br> Log-in -> Opsi Edit (Data Menu, User, History, dan Karyawan) -> Dashboard Informasi -> Log-out. <br> <br>
 **Opsi Edit** <br>
@@ -25,7 +25,7 @@ Data Menu -> Tambah, Hapus <br>
 Data User -> Update, Hapus <br>
 Data History -> Hapus <br>
 Data Karyawan -> Tambah, Update, Hapus <br> <br>
-**=====================================================================================** <br> <br>
+**======================================================================** <br> <br>
 **Fitur Kasir :**
 <br> Log-in -> (Menu Kasir) Menambah order dari pilihan Menu -> (Menu Pembayaran) Menampilkan nota -> Memasukkan nominal pembayaran & Menampilkan nominal kembalian -> Print nota -> Log-out.
 
