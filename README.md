@@ -1,3 +1,35 @@
+# Kelompok PA Web A2-4
+* Zaki Baridwan Sauqi (2109116036)
+* Andi Yolanda Sagita (2109116023)
+* Shafa Nur Alifia (2109116026)
+
+# Tema
+Pada proyek akhir praktikum web ini kami membuat web dengan tema Coffee Shop yang bernama **Gudetama Cafe**, terinsiprasi dari salah satu karakter sanrio bernama Gudetama, yang identik dengan warna kuning. Dengan persona karakter tersebutlah kami membangun konsep web coffee shop ini.
+
+# Role
+Terdapat 3 jenis user yang dapat mengakses fitur web, yaitu:
+* Buyer
+* Admin
+* Kasir <br> 
+
+# Fitur
+Masing-masing peran tersebut memiliki akses terhadapt fitur yang berbeda. <br> 
+**=====================================================================================** <br> <br>
+**Fitur Buyer :** 
+<br> Sign-up -> Log-in -> Melihat Menu -> Menambah Order -> Membuat/Membatalkan Pesanan -> Melihat History Order -> Log-out. <br> <br>
+**=====================================================================================** <br> <br>
+**Fitur Admin :**
+<br> Log-in -> Opsi Edit (Data Menu, User, History, dan Karyawan) -> Dashboard Informasi -> Log-out. <br> <br>
+**Opsi Edit** <br>
+Data Menu -> Tambah, Hapus <br>
+Data User -> Update, Hapus <br>
+Data History -> Hapus <br>
+Data Karyawan -> Tambah, Update, Hapus <br> <br>
+**=====================================================================================** <br> <br>
+**Fitur Kasir :**
+<br> Log-in -> (Menu Kasir) Menambah order dari pilihan Menu -> (Menu Pembayaran) Menampilkan nota -> Memasukkan nominal pembayaran & Menampilkan nominal kembalian -> Print nota -> Log-out.
+
+# Alur Penggunaan
 1. Pertama kali membuka web akan masuk ke halaman home, dimana pada halaman home ini terdapat 4 
     halaman yaitu about, menu, contact dan Log in.
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/2bbf4e75-e5a0-4232-9b0b-7006c05d3f09)
