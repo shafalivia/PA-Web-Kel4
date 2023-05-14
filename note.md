@@ -16,7 +16,7 @@ Home-user
 
 Home-buyer
 - home ✅ 
-- make order ✅  ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/119934043/19a43e6d-69be-45a8-8863-9be8dd450fc0) (tlg udh kutambahin         error_reporting(E_ALL ^ E_WARNING); padahal SHAFA ;-;)
+- make order ✅  (tlg udh kutambahin error_reporting(E_ALL ^ E_WARNING); padahal SHAFA ;-;)✅
 - history ✅ ( ini kea apa cug klo historynya pas bagian search gabisa balik kecuali refresh, apa tambahin button refresh ya? dmn tpi -yln)
 kalau mau tambahin pake css ini, saranku taro dibawah aja kasih bru center, atau taro dalam table ya?
 input[type="submit"] {
@@ -43,10 +43,10 @@ Home-Admin
 Home-Admin, update data
 - update data karyawan ✅
 - update data user ✅
-di table nya yg menu CRUD nya mau diubah jadi tombol kh? (sembarang shaf)
+di table nya yg menu CRUD nya mau diubah jadi tombol kh? (sembarang shaf) gausah udh bagus
 
 Home-Kasir
-- aku lupa kita pake kasir udh ada dibikin kah? 
+- aku lupa kita pake kasir udh ada dibikin kah? ✅
 
 Update data 0
 tambah menu 20%
@@ -54,11 +54,11 @@ tambah menu 20%
 - log out admin  ✅
 
 tambahan dari konsul :
-alern nya diubah jadi pop up
-mau pake font gak? (mau -yln)
+alern nya diubah jadi pop up✅
+mau pake font gak? (mau -yln)✅
 
-Menu kasir (zaki bs aja nnti)
-Bikinn tutorial juga
+Menu kasir (zaki bs aja nnti)✅
+Bikinn tutorial juga✅
 
 Mau tambah dashboard ga ya? buat nampilin jumlah user, menu, pemasukkan, dsb...
 (sempat kah bro? -yln)
