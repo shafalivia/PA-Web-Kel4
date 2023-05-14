@@ -1,5 +1,36 @@
 <?php include 'header-user.php'; ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/1menu.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order User</title>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <style>
+        /* Custom style for SweetAlert */
+        .swal2-popup {
+            background-color: #FFF9C4; /* Change the background color */
+            color: #483114; /* Change the text color */
+        }
+        .my-custom-button-class {
+            background-color: #483114 !important;
+            color: #FFF9C4 !important;
+        }
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+</style>
+
 <?php 
 error_reporting(E_ERROR | E_PARSE);
 // Untuk mengambil order dari button
@@ -19,10 +50,18 @@ if (isset($_POST['order'])) {
     if (null !==('cart')) {
         // Masuk ke database
         $query = "INSERT INTO transaksi VALUES ('$date', $notrak,'$username', '$name', '$price', $jumlah, '$status')";
-        echo $query;
         mysqli_query($con, $query);
         echo "<script>
-        alert('Pesanan ditambahkan!');;
+        // alert('Pesanan ditambahkan!');;
+        Swal.fire({
+            title: '+Order!',
+            text: 'Pesanan ditambahkan!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'my-custom-button-class'
+            }
+          });
         </script> ";
 
         // Masuk ke Session
@@ -49,17 +88,6 @@ if (isset($_POST['order'])) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/1menu.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     <div class="container">
     <div class="con-order">
     
@@ -126,34 +154,47 @@ if (isset($_POST['order'])) {
     <div class="con-menu">
     <?php
     require('db/koneksi.php');
-    if (isset($_GET['action'])) {
-
-        if ($_GET['action'] == 'clearall') {
-            unset($_SESSION['cart']);
-            $delete  = "DELETE FROM transaksi WHERE no_transaksi = $notrak";
-            mysqli_query($con, $delete);
-        }
-
-        // ini cuma buat hapus isi checkout, bukan di database, jadi gk dipake
-        if ($_GET['action']=='remove') {
-            foreach ($_SESSION['cart'] as $key => $value) {
-                if ($value['id'] == $_GET['id']) {
-                    unset($_SESSION['cart'][$key]);
-                }
-            }
-        }
-
-        if ($_GET['action'] == 'pesan') {
-            unset($_SESSION['cart']);
-            $update  = "UPDATE transaksi SET status='Pesanan diterima' WHERE no_transaksi = $notrak";
-            echo $update;
-            mysqli_query($con, $update);
-            echo "<script>
-            alert('Pesanan sedang di proses silahkan ditunggu!');
-            document.location.href = 'main-user.php';
-            </script> ";
-        }
+    if ($_GET['action'] == 'clearall') {
+        $delete  = "DELETE FROM transaksi WHERE no_transaksi = $notrak";
+        mysqli_query($con, $delete);
+        unset($_SESSION['cart']);
     }
+
+    if ($_GET['action'] == 'pesan') {
+        unset($_SESSION['cart']);
+        $update  = "UPDATE transaksi SET status='Pesanan diterima' WHERE no_transaksi = $notrak";
+        // echo $update;
+        mysqli_query($con, $update);
+        echo "<script>
+        // alert('Pesanan sedang di proses silahkan ditunggu!');
+        // document.location.href = 'main-user.php';
+        Swal.fire({
+            title: 'Pesanan Dibuat!',
+            text: 'Silahkan ditunggu!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'my-custom-button-class'
+            }
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = 'main-user.php';
+            }
+          });
+        </script> ";
+    }
+
+    // if (isset($_GET['action'])) {
+    //     // ini cuma buat hapus isi checkout, bukan di database, jadi gk dipake
+    //     if ($_GET['action']=='remove') {
+    //         foreach ($_SESSION['cart'] as $key => $value) {
+    //             if ($value['id'] == $_GET['id']) {
+    //                 unset($_SESSION['cart'][$key]);
+    //             }
+    //         }
+    //     }
+
+    // }
     
     ?>
     <?php

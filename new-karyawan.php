@@ -1,5 +1,34 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="css/update-data.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Tambah Karyawan</title>
+</head>
+<body>
 
+<link rel="stylesheet" type="text/css" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <style>
+        /* Custom style for SweetAlert */
+        .swal2-popup {
+            background-color: #FFF9C4; /* Change the background color */
+            color: #483114; /* Change the text color */
+        }
+        .my-custom-button-class {
+            background-color: #483114 !important;
+            color: #FFF9C4 !important;
+        }
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+</style>
+
+<?php
 require "db/koneksi.php";
 
 if(isset($_GET['tambah']) ) {
@@ -16,8 +45,20 @@ if(isset($_GET['tambah']) ) {
     // echo $query;
     mysqli_query($con, $query);
     echo "<script>
-    alert('Berhasil tambah data');
-    document.location.href = 'edit-karyawan.php';
+    // document.location.href = 'edit-karyawan.php';
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Data telah di Tambahkan.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'my-custom-button-class'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'edit-karyawan.php';
+        }
+      });
     </script> ";
 }
 ?>
@@ -29,15 +70,6 @@ $result1 = mysqli_query($con, $sel_query);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" type="text/css" href="css/update-data.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
     <a href="edit-karyawan.php" class="back-button">
     <span>Back</span></a>
 

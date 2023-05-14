@@ -1,6 +1,7 @@
 <?php include 'header-admin.php'; ?>
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="css/main-admin.css">
+<title>Admin Gudetama Café</title>
 <html>
 <body>
 	<div class="container">

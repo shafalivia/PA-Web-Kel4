@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
-    <title>Menuuu</title>
+    <title>Menu Gudetama Café</title>
 </head>
 <body>
     <section id="menu">

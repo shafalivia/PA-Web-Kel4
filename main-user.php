@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/main-user.css">
-    <title>Main</title>
+    <title>User Gudetama Café</title>
 </head>
 <body>
     <section class="back">

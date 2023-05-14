@@ -1,5 +1,28 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<title>Sign-Up</title>
+
+<body class="align">
+
+<link rel="stylesheet" type="text/css" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <style>
+        /* Custom style for SweetAlert */
+        .swal2-popup {
+            background-color: #FFF9C4; /* Change the background color */
+            color: #483114; /* Change the text color */
+        }
+        .my-custom-button-class {
+            background-color: #483114 !important;
+            color: #FFF9C4 !important;
+        }
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+</style>
 
 <?php 
     require "db/koneksi.php";
@@ -13,13 +36,24 @@
 
         mysqli_query($con, $query);
         echo "<script>
-        alert('Akun anda sudah siap!');
-        document.location.href = '1login.php';
+        // document.location.href = '1login.php';
+        Swal.fire({
+            title: 'Berhasil!',
+            text: 'Akun telah dibuat. Silahkan Login!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'my-custom-button-class'
+            }
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = '1login.php';
+            }
+          });
         </script> ";
     }
     ?>
 
-<body class="align">
     <a href="index.php" class="back-button">
         <span>Back</span>
     </a>
@@ -43,3 +77,5 @@
  
 </body>
    
+
+</html>

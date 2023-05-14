@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/update-data.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <style>
+        /* Custom style for SweetAlert */
+        .swal2-popup {
+            background-color: #FFF9C4; /* Change the background color */
+            color: #483114; /* Change the text color */
+        }
+        .my-custom-button-class {
+            background-color: #483114 !important;
+            color: #FFF9C4 !important;
+        }
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+</style>
+
 <?php
 
 require "db/koneksi.php";
@@ -26,36 +55,46 @@ function ubah($data) {
                 email = '$email',
                 password = '$pass'
                 WHERE username = '$id' AND role = 'user'";
-    echo $query;
     mysqli_query($con, $query);
     return mysqli_affected_rows($con);
 }
 
 if( isset($_POST['update'])) {
     if(ubah($_POST) >0 ){
-
         echo "<script>
-        alert('Berhasil Update data');
-        document.location.href = 'edit-datauser.php';
+        // document.location.href = 'edit-datauser.php';
+        Swal.fire({
+            title: 'Berhasil!',
+            text: 'Data telah di Update.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'my-custom-button-class'
+            }
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = 'edit-datauser.php';
+            }
+          });
         </script> ";
     } else{
         echo "<script>
-        alert('Gagal Update data');
+        // alert('Gagal Update data');
+        Swal.fire({
+            title: 'Gagal!',
+            text: 'Data tidak di Update.',
+            icon: 'warning',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'my-custom-button-class'
+            }
+          });
         </script> ";
     }
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="css/update-data.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 <a href="edit-karyawan.php" class="back-button">
         <span>Back</span>
     </a>3

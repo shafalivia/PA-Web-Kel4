@@ -1,5 +1,34 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/update-data.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Tambah Menu Gudetama Café</title>
+</head>
+<body>
 
+<link rel="stylesheet" type="text/css" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <style>
+        /* Custom style for SweetAlert */
+        .swal2-popup {
+            background-color: #FFF9C4; /* Change the background color */
+            color: #483114; /* Change the text color */
+        }
+        .my-custom-button-class {
+            background-color: #483114 !important;
+            color: #FFF9C4 !important;
+        }
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+</style>
+
+<?php 
 require('db/koneksi.php');
     
 if(isset($_POST['tambah'])){
@@ -19,8 +48,20 @@ if(isset($_POST['tambah'])){
         if ($query) {
             echo "
                 <script>
-                    alert('Data Berhasil Ditambahkan...');
-                    document.location.href = 'edit-menu.php';
+                    // document.location.href = 'edit-menu.php';
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        text: 'Data telah di Tambahkan.',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                          confirmButton: 'my-custom-button-class'
+                        }
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                          window.location.href = 'edit-menu.php';
+                        }
+                      });
                 </script>
             ";
         } else {
@@ -30,8 +71,21 @@ if(isset($_POST['tambah'])){
     else {
         echo "
             <script>
-                alert('Data Gagal Ditambahkan...');
-                document.location.href = 'edit-menu.php';s
+                // alert('Data Gagal Ditambahkan...');
+                // document.location.href = 'edit-menu.php';
+                Swal.fire({
+                    title: 'Gagal!',
+                    text: 'Data tidak di Tambahkan.',
+                    icon: 'warning',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                      confirmButton: 'my-custom-button-class'
+                    }
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      window.location.href = 'edit-menu.php';
+                    }
+                  });
             </script>
         ";
     }
@@ -39,22 +93,13 @@ if(isset($_POST['tambah'])){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/update-data.css">
-</head>
-<body>
     <a href="edit-menu.php" class="back-button">
     <span>Back</span></a>
 
     <h1>Input Data Menu</h1>
                 <form action="" method="POST" enctype="multipart/form-data">
-                <p>Id Menu</p>
-                <input type="text" name="id_menu" placeholder="Enter ID Menu..." required>
+                    <p>Id Menu</p>
+                    <input type="text" name="id_menu" placeholder="Enter ID Menu..." required>
                     <p>Name Menu</p>
                     <input type="text" name="name_menu" placeholder="Enter name..." required>
                     <p>Product Image</p>
@@ -62,7 +107,7 @@ if(isset($_POST['tambah'])){
                     <p>Price</p>
                     <input type="number" name="price_menu" placeholder="Enter price..." required> <br>
             
-                    <button type="submit" name="tambah">TAMBAH</button>
+                <button type="submit" name="tambah">TAMBAH</button>
                 </form>
 </body>
 </html>

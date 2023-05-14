@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="css/kasir.css">
+<title>Kasir Gudetama Café</title>
 <html>
 <body>
 
@@ -15,7 +17,14 @@
             background-color: #483114 !important;
             color: #FFF9C4 !important;
         }
-        </style>
+        .my-custom-button-class-cancel {
+            background-color: #fbb138 !important;
+            color: #483114 !important;
+        }
+        .my-icon-class {
+          color: #483114 !important;
+        }
+</style>
 
 <?php
 error_reporting(E_ERROR | E_PARSE);
@@ -90,8 +99,33 @@ if (isset($_POST['save'])) {
 
 ?>
 
-<a href="index.php" class="back-button">
+<a href="index.php" class="back-button" id="logout-link">
 <span>Logout</span> </a>
+<script>
+    document.getElementById('logout-link').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    Swal.fire({
+        title: 'Log Out',
+        text: 'Are you sure you want to log out?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+        customClass: {
+                    confirmButton: 'my-custom-button-class',
+                    cancelButton: 'my-custom-button-class-cancel',
+                    icon: 'my-icon-class'
+                },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Perform the logout action or navigate to the logout page
+          window.location.href = 'index.php';
+        }
+      });
+  });
+</script>
+
 	<div class="container">
 			<div class="card">
 				<h2>Kasir</h2>
@@ -283,123 +317,3 @@ if (isset($_POST['save'])) {
 
     </script>
 	</body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-* {
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #483114;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    border-radius: 5px;
-}
-.card {
-    width: 500px;
-    height: 600px;
-    background-color: #FFF9C4;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    margin: 0px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease-in-out;
-}
-.card:hover {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-}
-h2 {
-    margin: 0px;
-    font-size: 24px;
-    color: #212121;
-}
-p {
-    margin: 0px;
-    font-size: 16px;
-    color: #757575;
-}
-a {
-    text-decoration: none;
-}
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], select,
-        input[type="number"] {
-            width: 97%;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            background-color: #fff;
-            border-bottom-width: 2px;
-            transition: all 0.3s ease;
-        }
-        
-        select {
-            width: 100%;
-            padding: 5px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 10px;
-            border-color: #212121;
-        }
-        
-        th,
-        td {
-            padding: 8px;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        button[type=submit], button[type=button] {
-            background-color: #483114;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        button[type=submit]:hover {
-            background-color: #a06d1a;
-        }
-
-  .back-button {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: #272727;
-    background-color: #FBB138;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    text-decoration: none;
-  }
-  
-  .back-button:hover {
-    background-color: #ff9d00;
-    text-decoration: none;
-    color: white;
-  }
-    </style>
