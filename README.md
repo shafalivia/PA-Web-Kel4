@@ -54,10 +54,10 @@
 
 18. Pada bagian untuk mengedit data user, admin dapat menghapus dan mengupdate data user
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/adb47f85-7b4c-4089-afaa-3a90c6401fc7)
-    ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/adb47f85-7b4c-4089-afaa-3a90c6401fc7)
+    ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/92817597/c11ce6ef-e93d-4cdf-b8ac-822a929261e2)
 
 19. Pada bagian untuk mengedit history, admin hanya dapat menghapus data
-    ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/adb47f85-7b4c-4089-afaa-3a90c6401fc7)
+    ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/6218c115-1b79-46e4-b5a7-49a61ecfd377)
 
 20. Pada bagian untuk mengedit karyawan, admin dapat menambah, menghapus, dan mengupdate data karyawan
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/15fccb0c-de48-4d90-8018-337bc79490fc)
