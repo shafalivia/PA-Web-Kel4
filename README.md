@@ -29,6 +29,9 @@ Data Karyawan -> Tambah, Update, Hapus <br> <br>
 **Fitur Kasir :**
 <br> Log-in -> (Menu Kasir) Menambah order dari pilihan Menu -> (Menu Pembayaran) Menampilkan nota -> Memasukkan nominal pembayaran & Menampilkan nominal kembalian -> Print nota -> Log-out.
 
+# Database
+![erd pa web](https://github.com/shafalivia/PA-Web-Kel4/assets/92817597/7a3de919-98e7-45d8-bf4e-6c3d7f0127cb)
+
 # Alur Penggunaan
 1. Pertama kali membuka web akan masuk ke halaman home, dimana pada halaman home ini terdapat 4 
     halaman yaitu about, menu, contact dan Log in.
