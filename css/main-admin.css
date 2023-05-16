@@ -1,12 +1,13 @@
 body {
     background-color: #FFF9C4;
 }
-.container {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 .card {
     width: 250px;
     height: 300px;
@@ -24,6 +25,7 @@ body {
 .card:hover {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
+
 h2 {
     margin: 0px;
     font-size: 24px;

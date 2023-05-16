@@ -35,6 +35,7 @@
       <li><a href="edit-datauser.php">Data User</a></li>
       <li><a href="edit-history.php">History</a></li>
       <li><a href="edit-karyawan.php">Karyawan</a></li>
+      <li><a href="dash.php">Dashboard</a></li>
       <li class="signup"><a href="index.php" onclick="showLogoutPopup(event)">Log Out</a></li>
     </ul>
   </header>

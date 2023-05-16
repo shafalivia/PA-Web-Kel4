@@ -49,6 +49,7 @@
 </head>
 
 <body>
+<?php include 'header-admin2.php'; ?>
 <section id="dashboard">
   <div class="container mt-4">
     <div class="row">

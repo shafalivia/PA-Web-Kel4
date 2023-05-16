@@ -4,6 +4,7 @@
 <title>Admin Gudetama Café</title>
 <html>
 <body>
+	<section>
 	<div class="container">
 		<a href="edit-menu.php">
 			<div class="card">
@@ -33,4 +34,14 @@
 				<p>Edit Employee's Data</p>
 			</div>
 		</a>	
+		<a href="dash.php">
+			<div class="card">
+				<img src="img/admin/gudee5.jpg"  alt="Dashboard" width="150px" height="150px">
+				<h2>Dashboard</h2>
+				<p>Show database details</p>
+			</div>
+		</a>	
+	</div>
+	</section>
+
 	</body>
