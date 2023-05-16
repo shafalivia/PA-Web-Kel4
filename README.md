@@ -80,7 +80,7 @@ Data Karyawan -> Tambah, Update, Hapus <br> <br>
 15. Hasil Print nota ke format csv. <br>
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/f4e963d9-63dc-419e-a56a-a549c5ed3276)
 
-16. Masuk ke role Admin terdapat Menu untuk mengedit menu, data user, riwayat, dan karyawan
+16. Masuk ke role Admin terdapat Menu untuk mengedit menu, data user, riwayat, karyawan, dan dashboard
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/6c273252-af84-47b8-a7b7-ba9799c0f6a0)
 
 17. Pada bagian untuk mengedit menu, admin dapat menambah menu baru dan menghapus menu yang ada
@@ -98,3 +98,6 @@ Data Karyawan -> Tambah, Update, Hapus <br> <br>
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/15fccb0c-de48-4d90-8018-337bc79490fc)
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/dd9b216e-c0e2-4d98-add5-f6e640c0df89)
     ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/120237231/fdf550c2-87d1-40e8-9af0-6143ff2f2ff6)
+    
+21. Dashboard Admin
+    ![image](https://github.com/shafalivia/PA-Web-Kel4/assets/92817597/ee188d61-6652-46e0-8bfe-7416ded4196b)
